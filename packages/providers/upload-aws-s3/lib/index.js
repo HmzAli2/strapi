@@ -20,6 +20,7 @@ module.exports = {
       new Promise((resolve, reject) => {
         // upload file on S3 bucket
         const path = file.path ? `${file.path}/` : '';
+        console.log('uploading file...');
         S3.upload(
           {
             Key: `${path}${file.hash}${file.ext}`,
